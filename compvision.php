@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
             <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+	    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
             <!-- Bootstrap core CSS -->
             <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
