@@ -8,7 +8,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 // Koneksikan blob storage
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=sinaubarengazurestorage;AccountKey=csLFrHU3SCrSlDLKPcTYO2BCHyN8HCfcB86Qovc6IG4YOnolrDIObNRaW/ojEQPx88Wh/4C98H8XYNAhhqoZAQ==;";
-$containerName = "blobsinaubarengsub2";
+$containerName = "blobsinaubareng";
 // Membuat blob client.
     $blobClient = BlobRestProxy::createBlobService($connectionString);
 	    
