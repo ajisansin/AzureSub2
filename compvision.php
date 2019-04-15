@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
             <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
-	    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+			 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
             <!-- Bootstrap core CSS -->
             <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,8 +26,7 @@ if (isset($_POST['submit'])) {
         <body>
 		<main role="main" class="container">
     		<div class="starter-template"> <br><br><br>
-        		<h1>Analisa Gambar</h1>
-				<p class="lead">Berikut hasil analisa</p>
+        		<h1>Hasil Gambar</h1>
 				<span class="border-top my-3"></span>
 			</div>
         <script type="text/javascript">
@@ -87,12 +86,6 @@ if (isset($_POST['submit'])) {
     </script>
 <br>
 <div id="wrapper" style="width:1020px; display:table;">
-	<div id="jsonOutput" style="width:600px; display:table-cell;">
-		<b>Response:</b>
-		<br><br>
-		<textarea id="responseTextArea" class="UIInput"
-		style="width:580px; height:400px;" readonly=""></textarea>
-	</div>
 	<div id="imageDiv" style="width:420px; display:table-cell;">
 		<b>Source Image:</b>
 		<br><br>
@@ -100,6 +93,13 @@ if (isset($_POST['submit'])) {
 		<br>
 		<h3 id="description">Loading description. . .</h3>
 	</div>
+	<div id="jsonOutput" style="width:600px; display:table-cell;">
+		<b>Response:</b>
+		<br><br>
+		<textarea id="responseTextArea" class="UIInput"
+		style="width:580px; height:400px;" readonly=""></textarea>
+	</div>
+
 </div>
 </body>
 </html>
