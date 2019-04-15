@@ -26,37 +26,36 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 
 <!DOCTYPE html>
 <html>
- <head>
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	 
-	    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
-	 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-	    <!-- Bootstrap core CSS -->
-	    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	</head>
+<head>
+  <title>Analisa Gambar dengan Micorsoft Azure Computer Vision</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<div class="jumbotron">
+  <h2>Analisa Gambar dengan Microsoft Azure Computer Vision</h2>      
+</div>
+</div>
     <body>
 		<main role="main" class="container">
-    		<div class="starter-template"> <br><br><br>
-        		<h1>Analisis Gambar</h1>
-				<p class="lead">Pilih Gambar.<br> Kemudian Klik <b>Upload</b>, untuk menganalisa gambar pilih <b>Analyze</b> pada tabel di bawah.</p>
-				<span class="border-top my-3"></span>
-			</div>
-		<div class="mt-4 mb-2">
+		<div>
 			<form class="d-flex justify-content-lefr" action="index.php" method="post" enctype="multipart/form-data">
-				<input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required="">
+				<input type="file" name="fileToUpload" accept=".jpeg,.jpg,.png" required=""></br>
 				<input type="submit" name="submit" value="Upload">
 			</form>
 		</div>
 		<br>
 		<br>
-		<h4>Total Files : <?php echo sizeof($result->getBlobs())?></h4>
-		<table class='table table-hover'>
+		<table class='table table-hover table-bordered'>
 			<thead>
 				<tr>
 					<th>File Name</th>
 					<th>File URL</th>
-					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -68,12 +67,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 						<tr>
 							<td><?php echo $blob->getName() ?></td>
 							<td><?php echo $blob->getUrl() ?></td>
-							<td>
-								<form action="compvision.php" method="post">
-									<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
-									<input type="submit" name="submit" value="Analyze" class="btn btn-primary">
-								</form>
-							</td>
 						</tr>
 						<?php
 					}
@@ -83,6 +76,15 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 			</tbody>
 		</table>
 
+	</div>
+	
+	<div>
+	<center>
+	<form action="compvision.php" method="post">
+		<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
+		<input type="submit" name="submit" value="Analyze" class="btn btn-primary">
+	</form>
+	</center>
 	</div>
 
 <!-- Placed at the end of the document so the pages load faster -->
