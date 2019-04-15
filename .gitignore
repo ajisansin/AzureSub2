@@ -8,7 +8,6 @@ test-file-*
 .php_cs.cache
 cache.properties
 output.txt
-/vendor/*
 /output/*
 /build/*
 /doc/*
